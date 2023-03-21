@@ -8,7 +8,7 @@
 docker run --name prometheus -d --rm -p 9090:9090 prom/prometheus
 ```
 
-# Adicionando o Prometheus e Actuator no Java
+# TUTORIAL API JAVA
 
 Primeiramente, precisamos da dependency do Actuator:
 
