@@ -1,2 +1,3 @@
-# prometheus-grafana
-Repository to store information about Prometheus and Grafana.
+# Funcionamento ilustrado
+
+![image](https://user-images.githubusercontent.com/80921933/226532921-14afda67-121e-4e04-932d-53aad08e7f37.png)
