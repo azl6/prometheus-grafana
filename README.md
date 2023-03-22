@@ -135,6 +135,21 @@ Caso esteja **UP**, já podemos visualizar as métricas no Prometheus:
 
 ![Screenshot from 2023-03-22 03-29-02](https://user-images.githubusercontent.com/80921933/226820350-808bc728-9fdd-4f6d-a2b2-8c56e520a2ac.png)
 
+# Filtrando a query no Prometheus
+
+Uma busca inicial seria pesquisar por uma métrica, como `http_server_requests_seconds_count`:
+
+![image](https://user-images.githubusercontent.com/80921933/226826659-7c273763-f7af-4d2c-98df-6eed3287c761.png)
+
+Podemos especificar entre `{}` os "registros" que queremos, por exemplo, `http_server_requests_seconds_count{uri="/"}`, para buscar somente requisições feitas para o caminho `/`:
+
+![image](https://user-images.githubusercontent.com/80921933/226827007-e706f01c-1c20-48c1-847b-dd5537efc6f1.png)
+
+Também é possível demonstrar a busca de um range, por exemplo, de 1 em 1 minuto, especificando o parâmetro `[1]`, em `http_server_requests_seconds_count{uri="/"}[1m]`:
+
+![image](https://user-images.githubusercontent.com/80921933/226827240-635fe51d-9e21-44f4-accf-77dda42dde56.png)
+
+
 # Monitorando OS
 
 Para isso, devemos instalar um exporter na máquina e seguir as instruções gerais da documentação.
