@@ -157,7 +157,26 @@ Alguns outros filtros possíveis:
 
 **Counters**, ou contadores, são números que **só aumentam**, como requisições recebidas, etc...
 
-Uma métrica interessante para se tirar de contadores (usando o **nº de requisições recebidas** como exemplo) seria o nº de requisições por segundo/minuto/etc. Para isso, é possível utilizar a função `rate()`. (CONTINUAR 1:45 AULA 30)
+Uma métrica interessante para se tirar de contadores (usando o **nº de requisições recebidas** como exemplo) seria o nº de requisições por segundo/minuto/etc. Para isso, é possível utilizar a função `rate()`.
+
+Entretanto, a função `rate()` recebe um **range vector**, e um contador é um **instant-vector**
+
+**Instant vector:** A métrica `http_server_requests_seconds_count` é um exemplo de um **instant vector**, já que só aumenta, e só retorna UM valor, do momento pesquisado.
+
+![image](https://user-images.githubusercontent.com/80921933/227043962-48aca3d8-2563-4693-8972-4aedfb7a7160.png)
+
+**Range vector:** O **range vector** representa valores para cada ponto dentro de um intervalo de tempo, como por exemplo, o número total de requisições do último minuto, com uma granularidade de 15 segundos. Essa query poderia ser representada da seguinte maneira: `http_server_requests_seconds_count[1m:15s]`. Isso significa que o range analisado será o de 1 minuto atrás até agora, criando-se pontos de análise de 15 em 15 segundos. Isso nos dará 4 pontos, já que 15 segundos * 4 pontos=1min, que é o range analisado.  
+
+![image](https://user-images.githubusercontent.com/80921933/227044778-f6ed659c-5da7-4376-8297-ddd21c02d48b.png)
+
+Voltando à utilização da função `rate()`, podemos aplicá-la na métrica `http_server_requests_seconds_count[1m]`, que é um **range vector**. Como resultado, obtemos **A média de requisições por SEGUNDO!**
+
+![image](https://user-images.githubusercontent.com/80921933/227045728-65acaa63-f519-4c14-bf39-74613d36cfa8.png)
+
+Perceba que o resultado dessa query foi 0.2. Isso representa 0.2 requisições por segundo ao endpoint /actuator/prometheus da aplicação. Em 5 segundos, o valor seria 1, e daí uma requisição seria completa. Esse tempo bate exatamente com o `scrape_interval` configurado no prometheus.yaml, que representa de quanto em quanto tempo as métricas serão coletadas.
+
+
+
 
 
 
