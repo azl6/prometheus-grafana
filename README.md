@@ -169,7 +169,7 @@ Entretanto, a função `rate()` recebe um **range vector**, e um contador é um 
 
 ![image](https://user-images.githubusercontent.com/80921933/227044778-f6ed659c-5da7-4376-8297-ddd21c02d48b.png)
 
-Voltando à utilização da função `rate()`, podemos aplicá-la na métrica `http_server_requests_seconds_count[1m]`, que é um **range vector**. Como resultado, obtemos **A média de requisições por SEGUNDO!**
+Voltando à utilização da função `rate()`, podemos aplicá-la na métrica `http_server_requests_seconds_count[1m]`, que é um **range vector**. Como resultado, obtemos **A média de requisições por SEGUNDO!** (caso queiramos esse valor por MINUTO, basta multiplicarmos por 60 no final da query!)
 
 ![image](https://user-images.githubusercontent.com/80921933/227045728-65acaa63-f519-4c14-bf39-74613d36cfa8.png)
 
