@@ -180,3 +180,15 @@ Perceba que o resultado dessa query foi 0.2. Isso representa 0.2 requisições p
 **Gauges** são valores que sobem e descem, e por isso, não há tanto segredo em trabalhar com eles. Basta especificar o range temporal e analisar o gráfico.
 
 ![image](https://user-images.githubusercontent.com/80921933/227050482-ad737edf-d393-493c-936b-a90201e9fd96.png)
+
+# Summary
+
+**Summary** são dados que relacionam quantidade com porcentagem, e.g 99% das requisições demoraram até 400ms, 90% demoraram até 700ms e 20% demoraram X ms...
+
+![image](https://user-images.githubusercontent.com/80921933/227053248-f942701d-3376-476f-894d-1ff573ccd4c0.png)
+
+
+O gráfico do **summary** também já vem pronto e não há muitas operações para executar.
+
+![image](https://user-images.githubusercontent.com/80921933/227053388-be90e20e-1eeb-4793-95c3-3f5b3edb49ba.png)
+
