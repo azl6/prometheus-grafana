@@ -148,8 +148,3 @@ Podemos especificar entre `{}` os "registros" que queremos, por exemplo, `http_s
 Também é possível demonstrar a busca de um range, por exemplo, de 1 em 1 minuto, especificando o parâmetro `[1]`, em `http_server_requests_seconds_count{uri="/"}[1m]`:
 
 ![image](https://user-images.githubusercontent.com/80921933/226827240-635fe51d-9e21-44f4-accf-77dda42dde56.png)
-
-
-# Monitorando OS
-
-Para isso, devemos instalar um exporter na máquina e seguir as instruções gerais da documentação.
