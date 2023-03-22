@@ -5,7 +5,7 @@
 # Iniciando um container do Prometheus
 
 ```bash
-docker run --name prometheus -d --rm -p 9090:9090 prom/prometheus
+docker run --name prometheus -d --rm -p 9090:9090 prom/prometheus:v2.24.1
 ```
 
 # Encontrando a documentação do Prometheus para o diferentes linguagens de programação
@@ -104,7 +104,7 @@ scrape_configs:
   static_configs:                      
   - targets:                           
     - localhost:9090
-- job_name: nomedomeuappaqui # Nome do app     
+- job_name: spring-boot # Nome do app     
   honor_timestamps: true               
   scrape_interval: 15s                 
   scrape_timeout: 10s                  
@@ -114,8 +114,24 @@ scrape_configs:
   enable_http2: true                   
   static_configs:                      
   - targets:                           
-    - localhost:9090  # Host e porta
+    - host.docker.internal:8080  # Host e porta. Lembrar de passar a flag do host.docker.internal!
 ```
 
 Por fim, criamos um bind-mount `-v /path/to/prometheus.yml:/etc/prometheus/prometheus.yml` para que nosso arquivo de configuração seja usado pelo Prometheus.
+
+O comando ficará assim:
+
+```
+docker run --name prometheus --rm --add-host=host.docker.internal:host-gateway -d -p 9090:9090 -v /home/azl6/Projects/prometheus-grafana/prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus:v2.24.1
+```
+
+A primeira coisa a se verificar depois de subir o contêiner é ver se o Prometheus foi capaz de contactar a aplicação, na sessão **Status -> Targets**. O status deve estar da seguinte maneira:
+
+![image](https://user-images.githubusercontent.com/80921933/226818898-d7925b64-f074-49af-a8aa-6fb690b85b75.png)
+
+Caso esteja vermelho, **POR FAVOR** verifique o `ufw` em caso de Ubuntu/Mint, ou correspondente para outras distros.
+
+Caso esteja **UP**, já podemos visualizar as métricas no Prometheus:
+
+![Screenshot from 2023-03-22 03-29-02](https://user-images.githubusercontent.com/80921933/226820350-808bc728-9fdd-4f6d-a2b2-8c56e520a2ac.png)
 
