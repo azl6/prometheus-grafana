@@ -196,9 +196,14 @@ O gráfico do **summary** também já vem pronto e não há muitas operações p
 
 Anotar...
 
-# Instalando o Grafana
+# Usando a imagem do Grafana e conectando ao Prometheus
 
 ```bash
 docker run --add-host=host.docker.internal:host-gateway -d --name=grafana -p 3000:3000 grafana/grafana
 ```
+
+Depois, em **Configuration -> Data Source**, adicionamos o host do Prometheus (só consigo usar host.docker.internal porque passei a flag --add-host... ao subir o Grafana)
+
+![image](https://user-images.githubusercontent.com/80921933/227061818-b77c8cd1-8653-448f-bc03-c67291127790.png)
+
 
