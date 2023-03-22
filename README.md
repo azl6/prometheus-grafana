@@ -117,4 +117,5 @@ scrape_configs:
     - localhost:9090  # Host e porta
 ```
 
+Por fim, criamos um bind-mount `-v /path/to/prometheus.yml:/etc/prometheus/prometheus.yml` para que nosso arquivo de configuração seja usado pelo Prometheus.
 
