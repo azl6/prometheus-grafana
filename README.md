@@ -192,3 +192,13 @@ O gráfico do **summary** também já vem pronto e não há muitas operações p
 
 ![image](https://user-images.githubusercontent.com/80921933/227053388-be90e20e-1eeb-4793-95c3-3f5b3edb49ba.png)
 
+# Histogramas
+
+Anotar...
+
+# Instalando o Grafana
+
+```bash
+docker run -d -p 3000:3000 --name grafana grafana/grafana-oss
+```
+
