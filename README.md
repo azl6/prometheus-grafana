@@ -199,6 +199,6 @@ Anotar...
 # Instalando o Grafana
 
 ```bash
-docker run -d --name=grafana -p 3000:3000 grafana/grafana
+docker run --add-host=host.docker.internal:host-gateway -d --name=grafana -p 3000:3000 grafana/grafana
 ```
 
