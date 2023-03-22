@@ -135,3 +135,6 @@ Caso esteja **UP**, já podemos visualizar as métricas no Prometheus:
 
 ![Screenshot from 2023-03-22 03-29-02](https://user-images.githubusercontent.com/80921933/226820350-808bc728-9fdd-4f6d-a2b2-8c56e520a2ac.png)
 
+# Monitorando OS
+
+Para isso, devemos instalar um exporter na máquina e seguir as instruções gerais da documentação.
