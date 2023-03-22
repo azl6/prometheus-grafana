@@ -153,3 +153,11 @@ Alguns outros filtros possíveis:
 
 ![image](https://user-images.githubusercontent.com/80921933/226827627-14db221b-155c-4acb-93ca-42016cd7edf6.png)
 
+# Counters
+
+**Counters**, ou contadores, são números que **só aumentam**, como requisições recebidas, etc...
+
+Uma métrica interessante para se tirar de contadores (usando o **nº de requisições recebidas** como exemplo) seria o nº de requisições por segundo/minuto/etc. Para isso, é possível utilizar a função `rate()`. (CONTINUAR 1:45 AULA 30)
+
+
+
