@@ -199,6 +199,6 @@ Anotar...
 # Instalando o Grafana
 
 ```bash
-docker run -d -p 3000:3000 --name grafana grafana/grafana-oss
+docker run -d --name=grafana -p 3000:3000 grafana/grafana
 ```
 
