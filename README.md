@@ -175,8 +175,8 @@ Voltando à utilização da função `rate()`, podemos aplicá-la na métrica `h
 
 Perceba que o resultado dessa query foi 0.2. Isso representa 0.2 requisições por segundo ao endpoint /actuator/prometheus da aplicação. Em 5 segundos, o valor seria 1, e daí uma requisição seria completa. Esse tempo bate exatamente com o `scrape_interval` configurado no prometheus.yaml, que representa de quanto em quanto tempo as métricas serão coletadas.
 
+# Gauges
 
+**Gauges** são valores que sobem e descem, e por isso, não há tanto segredo em trabalhar com eles. Basta especificar o range temporal e analisar o gráfico.
 
-
-
-
+![image](https://user-images.githubusercontent.com/80921933/227050482-ad737edf-d393-493c-936b-a90201e9fd96.png)
