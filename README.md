@@ -229,4 +229,6 @@ Depois, basta referenciá-las nas queries:
 ![image](https://user-images.githubusercontent.com/80921933/227101237-ffb85d40-e41b-46e4-b5de-0a326236c852.png)
 
 
+# Configurando Alertas
 
+Nas configurações de um dashboard e selecionamos o **Alert Channel** (Telegram, E-mail, etc...) e as condições para o alerta ser disparado.
