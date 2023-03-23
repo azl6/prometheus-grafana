@@ -224,5 +224,9 @@ Depois, em **Configuration -> Data Source**, adicionamos o host do Prometheus (s
 
 ![image](https://user-images.githubusercontent.com/80921933/227100435-a758ea85-2e15-456d-b859-8277341f96ed.png)
 
+Depois, basta referenciá-las nas queries:
+
+![image](https://user-images.githubusercontent.com/80921933/227101237-ffb85d40-e41b-46e4-b5de-0a326236c852.png)
+
 
 
