@@ -199,7 +199,7 @@ Anotar...
 # Usando a imagem do Grafana e conectando ao Prometheus
 
 ```bash
-docker run --add-host=host.docker.internal:host-gateway -d --name=grafana -p 3000:3000 grafana/grafana
+docker run --add-host=host.docker.internal:host-gateway -d --name=grafana -p 3000:3000 grafana/grafana:7.4.1
 ```
 
 Depois, em **Configuration -> Data Source**, adicionamos o host do Prometheus (só consigo usar host.docker.internal porque passei a flag --add-host... ao subir o Grafana)
