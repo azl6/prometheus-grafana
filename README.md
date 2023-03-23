@@ -1,5 +1,6 @@
 # Práticas
 
+- Adicionar métricas customizadas
 - Panel de usuários logados
 - Panel de taxa de erros da API
 - Panel da quantidade de requests/segundo dos endpoints
