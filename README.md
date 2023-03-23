@@ -218,7 +218,11 @@ Depois, em **Configuration -> Data Source**, adicionamos o host do Prometheus (s
 
 1. Podemos usar {{ ... }} ao nomear labels:
 
-  ![Screenshot from 2023-03-23 01-02-46](https://user-images.githubusercontent.com/80921933/227100107-9322e19c-f4a2-4e72-b1e1-0ed843a1f896.png)
+![Screenshot from 2023-03-23 01-02-46](https://user-images.githubusercontent.com/80921933/227100107-9322e19c-f4a2-4e72-b1e1-0ed843a1f896.png)
+
+2. Podemos criar variáveis com valores personalizados
+
+![image](https://user-images.githubusercontent.com/80921933/227100435-a758ea85-2e15-456d-b859-8277341f96ed.png)
 
 
 
