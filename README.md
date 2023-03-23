@@ -5,6 +5,7 @@
 - Panel de taxa de erros da API
 - Panel da quantidade de requests/segundo dos endpoints
 - Total de requisições no período selecionado com $__range e $__interval (aula 49)
+- Revisar Histogramas e Summary (documentar histogramas!)
 
 # Funcionamento ilustrado
 
